@@ -1,7 +1,22 @@
 {
-	"name": "@cloud9c/taro",
-	"version": "0.0.1",
-	"scripts": {
-		"build": "rollup -c rollup.config.js"
-	}
+  "name": "taro-extended",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "rollup -c rollup.config.js"
+  },
+  "description": "![GIF](README.gif)",
+  "main": "rollup.config.js",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/444iamahmed/taro.git"
+  },
+  "author": "444iamahmed",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/444iamahmed/taro/issues"
+  },
+  "homepage": "https://github.com/444iamahmed/taro#readme"
 }

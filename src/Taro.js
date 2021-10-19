@@ -11,6 +11,7 @@ import './components/Light.js';
 import './components/Material.js';
 import './components/Model.js';
 import './components/Renderable.js';
+import './components/VectorSprite.js'
 
 // physics components
 import './components/physics/Shape.js';
