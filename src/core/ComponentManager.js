@@ -144,6 +144,9 @@ export const ComponentManager = {
 				case 'entity':
 					prop.default = null;
 					break;
+				case 'dictionary':
+					prop.default = {};
+					break;
 				default:
 					console.error( 'ComponentManager: invalid schema property type ' + typeof prop.type );
 

@@ -222,7 +222,7 @@ Material.config = {
 		depthWrite: { default: true, if: { type: builtIn } },
 		wireframe: { default: false, if: { type: [ 'basic', 'depth', 'lambert', 'normal', 'phong', 'standard', 'physical', 'toon' ] } },
 
-		uniforms: { default: null , if: { type: [ 'shader' ]}},
+		uniforms: { type: 'dictionary' , if: { type: [ 'shader' ]}},
 		vertexShader: { default: "", if: {type: [ 'shader' ]}},
 		fragmentShader: { default: "", if: {type: [ 'shader' ]}},
 		asset: { type: 'asset', if: { type: [ 'asset' ] } },
