@@ -44,6 +44,11 @@ class VectorSprite {
             const paths = stuff.paths;
 
             const group = new THREE.Group();
+            group.scale.multiplyScalar( 0.25 );
+					group.position.x = - 70;
+					group.position.y = 70;
+					group.scale.y *= - 1;
+
 
 
             for (let i = 0; i < paths.length; i++) {
@@ -108,7 +113,6 @@ class VectorSprite {
 
             }
 
-            group.scale.set(0.01, 0.01, 0.01);
 
             instance.onLoad(url, group);
 
