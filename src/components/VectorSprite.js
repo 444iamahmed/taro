@@ -115,7 +115,7 @@ class VectorSprite {
         }
 
 
-        instance.onLoad(url, group);
+        this.onLoad(svg, group);
     }
 
     loadSVG(url, instance) {
