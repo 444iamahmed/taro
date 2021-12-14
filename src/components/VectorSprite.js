@@ -14,7 +14,7 @@ class VectorSprite {
 
         console.log(data.asset);
 
-        this.extractSize(data.asset);
+        this.loadXMLDoc(data.asset);
         if (data.parse)
             this.parseSVG(data.asset);
         else
@@ -42,9 +42,25 @@ class VectorSprite {
 
     }
 
-    extractSize(svg) {
-        var xmlDoc = loadXMLDoc(svg);
-    }
+    loadXMLDoc(doc) {
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+            myFunction(this);
+          }
+        };
+        xmlhttp.open("GET", doc, true);
+        xmlhttp.send();
+      }
+      
+      myFunction(xml) {
+        var x, i, xmlDoc, txt;
+        xmlDoc = xml.responseXML;
+        txt = "";
+        x = xmlDoc.getElementById("svg").getAttribute('viewport');
+        
+        console.log(x);
+      }
 
     parseSVG(svg) {
         let data = svgLoader.parse(svg);
