@@ -45,9 +45,9 @@ class VectorSprite {
         const paths = data.paths;
 
         const group = new THREE.Group();
-        group.scale.multiplyScalar(0.25);
-        group.position.x = - 70;
-        group.position.y = 70;
+        // group.scale.multiplyScalar(0.25);
+        // group.position.x = - 70;
+        // group.position.y = 70;
         group.scale.y *= - 1;
 
 
@@ -127,9 +127,9 @@ class VectorSprite {
             const paths = stuff.paths;
 
             const group = new THREE.Group();
-            group.scale.multiplyScalar(0.25);
-            group.position.x = - 70;
-            group.position.y = 70;
+            // group.scale.multiplyScalar(0.25);
+            // group.position.x = - 70;
+            // group.position.y = 70;
             group.scale.y *= - 1;
 
 
