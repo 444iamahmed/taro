@@ -8,10 +8,13 @@ class VectorSprite {
 
     init(data) {
 
+
+
         this.ref = typeof data.asset === 'object' ? data.asset : this.app.assets.get(data.asset);
 
         console.log(data.asset);
 
+        this.extractSize(data.asset);
         if (data.parse)
             this.parseSVG(data.asset);
         else
@@ -37,6 +40,10 @@ class VectorSprite {
         if (this.ref !== undefined)
             this.entity.remove(this.ref);
 
+    }
+
+    extractSize(svg) {
+        var xmlDoc = loadXMLDoc(svg);
     }
 
     parseSVG(svg) {
@@ -123,6 +130,7 @@ class VectorSprite {
 
 
 
+
         svgLoader.load(url, function (stuff) {
 
             const paths = stuff.paths;
@@ -198,26 +206,26 @@ class VectorSprite {
             }
 
 
-            // instance.onLoad(url, group);
-            instance.onLoad(url, new THREE.Box3().setFromObject(group).getCenter(group.position).multiplyScalar(- 1)
-            );
+            instance.onLoad(url, group);
+            // instance.onLoad(url, new THREE.Box3().setFromObject(object).getCenter(object.position).multiplyScalar(- 1);
+            // );
 
 
-        });
+    });
 
-    }
+}
 
-    onLoad(key, asset) {
+onLoad(key, asset) {
 
-        this.app.assets.add(key, asset);
+    this.app.assets.add(key, asset);
 
-        this.ref = asset;
+    this.ref = asset;
 
-        if (this.enabled) this.onEnable();
+    if (this.enabled) this.onEnable();
 
-        this.dispatchEvent({ type: 'load', asset });
+    this.dispatchEvent({ type: 'load', asset });
 
-    }
+}
 
 
 }
