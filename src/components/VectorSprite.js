@@ -48,7 +48,7 @@ class VectorSprite {
         // group.scale.multiplyScalar(0.25);
         // group.position.x = - 70;
         // group.position.y = 70;
-        // group.scale.y *= - 1;
+        group.scale.y *= - 1;
 
 
 
@@ -130,7 +130,7 @@ class VectorSprite {
             // group.scale.multiplyScalar(0.25);
             // group.position.x = - 70;
             // group.position.y = 70;
-            // group.scale.y *= - 1;
+            group.scale.y *= - 1;
 
 
 
