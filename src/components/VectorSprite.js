@@ -198,7 +198,10 @@ class VectorSprite {
             }
 
 
-            instance.onLoad(url, group);
+            // instance.onLoad(url, group);
+            instance.onLoad(url, new THREE.Box3().setFromObject(group).getCenter(group.position).multiplyScalar(- 1)
+            );
+
 
         });
 
